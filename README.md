@@ -23,3 +23,37 @@ This program was built to start using different utilities from the rust standard
 - `cmp::Ordering` to compare numbers and flesh out the game logic
 
 Both mutable and immutable variables were used to keep track of the game state and the user input.
+
+### Convert Temperature
+
+A simple program that converts temperature from Fahrenheit to Celsius. The user will enter temp in f and be returned the correct temp in c.
+
+The point of this is to familiarise myself with the `std::io` library and the `Result` type as well as work with data types and error handling in Rust.
+
+### Fibonacci Sequence
+
+A program that calculates the nth Fibonacci number and optionally displays the entire sequence up to that number. The user inputs a position in the Fibonacci sequence, and the program outputs the corresponding Fibonacci number. Additionally, the user can choose to see the entire sequence up to that number.
+
+This program was created to practice working with loops, conditionals, and vector data structures in Rust. It also demonstrates basic error handling and user input validation.
+
+*Key features and concepts covered:*
+
+- Input Validation: Ensuring the user inputs a valid number within the allowed range (0 to 93).
+- Iterative Calculation: Using a loop to calculate Fibonacci numbers efficiently.
+- Optional Sequence Display: Allowing the user to choose whether to see just the nth number or the entire sequence up to that number.
+- Colored Output: Utilizing the colored crate to enhance the user interface with colored text.
+
+
+*This program uses the following Rust libraries and techniques:*
+
+- std::io for reading user input
+- std::vec::Vec for storing the Fibonacci sequence
+- colored crate for adding color to terminal output
+
+This project reinforces the use of basic Rust syntax and control flow, while also introducing external crates to enhance functionality and user experience.
+
+
+
+
+
+
