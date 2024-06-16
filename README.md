@@ -52,8 +52,55 @@ This program was created to practice working with loops, conditionals, and vecto
 
 This project reinforces the use of basic Rust syntax and control flow, while also introducing external crates to enhance functionality and user experience.
 
+### Twelve Days of Christmas
 
+A Rust program that prints the lyrics to the Christmas carol "The Twelve Days of Christmas." The program takes advantage of the repetition in the song by using loops and arrays to generate the lyrics.
 
+This program was created to practice using loops, arrays, and basic control flow in Rust. It demonstrates how to efficiently handle repetitive text generation through code.
 
+*Key features and concepts covered:*
 
+- Arrays for Static Data: Simple days array and also a gifts array in the corresponding order.
+- Nested Loops for Repetition: An outer loop iterates over each day, and an inner loop iterates over the gifts for each day in reverse order to generate the correct lyrics.
+- Conditional Logic: Uses a condition to add "and" before the first gift on days after the first day to match the song's structure.
 
+Here is the code:
+
+```rust
+fn main() {
+    let days = [
+        "first", "second", "third", "fourth", "fifth", "sixth",
+        "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
+    ];
+
+    let gifts = [
+        "a Partridge in a Pear Tree.",
+        "Two Turtle Doves",
+        "Three French Hens",
+        "Four Calling Birds",
+        "Five Golden Rings",
+        "Six Geese a Laying",
+        "Seven Swans a Swimming",
+        "Eight Maids a Milking",
+        "Nine Ladies Dancing",
+        "Ten Lords a Leaping",
+        "Eleven Pipers Piping",
+        "Twelve Drummers Drumming"
+    ];
+
+    for day in 0..12 {
+        println!("On the {} day of Christmas", days[day]);
+        println!("my true love sent to me:");
+
+        for gift in (0..=day).rev() {
+            if day > 0 && gift == 0 {
+                print!("and ");
+            }
+            println!("{}", gifts[gift]);
+        }
+        println!();
+    }
+}
+```
+
+This program demonstrates handling repetitive tasks in rust and uses arrays, loops, string formatting and conditional logic to generate the lyrics to the song.
